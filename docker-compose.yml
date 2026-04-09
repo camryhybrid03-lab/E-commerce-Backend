@@ -1,0 +1,31 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  web:
+    image: mini-project-2-web
+    build:
+      context: .
+    command: uv run python manage.py runserver 0.0.0.0:8000
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  celery_worker:
+    image: mini-project-2-web
+    build:
+      context: .
+    command: uv run celery -A config worker -l info
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
