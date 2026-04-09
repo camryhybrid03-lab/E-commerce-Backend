@@ -1,6 +1,5 @@
 from django.db import transaction
 from django.db.models import F
-from django.shortcuts import get_object_or_404
 from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
