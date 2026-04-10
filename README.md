@@ -89,5 +89,10 @@ curl -s http://127.0.0.1:8000/api/orders/ \
 ### Kiểm tra độ bao phủ (Test Coverage)
 uv run pytest -v --cov=.
 
-# Kiểm tra code chuẩn PEP8 với Ruff
+### Kiểm tra code chuẩn PEP8 với Ruff
 uv run ruff check .
+
+### 📊 Test Coverage Result
+Đây là kết quả kiểm thử của Day 7:
+
+![Test Coverage Screenshot](./images/coverage.png)
