@@ -84,3 +84,10 @@ curl -s http://127.0.0.1:8000/api/orders/ \
   -H "Authorization: Token $TOKEN"
 ```
 
+## 🧪 Kiểm thử Code (Testing & Linting)
+ Dự án đảm bảo chất lượng cao với các bộ test tự động:
+### Kiểm tra độ bao phủ (Test Coverage)
+uv run pytest -v --cov=.
+
+# Kiểm tra code chuẩn PEP8 với Ruff
+uv run ruff check .
