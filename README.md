@@ -84,15 +84,15 @@ curl -s http://127.0.0.1:8000/api/orders/ \
   -H "Authorization: Token $TOKEN"
 ```
 
-## 🧪 Kiểm thử Code (Testing & Linting)
- Dự án đảm bảo chất lượng cao với các bộ test tự động:
-### Kiểm tra độ bao phủ (Test Coverage)
+## 🧪 Code Quality (Testing & Linting)
+This project ensures high quality through automated testing and linting suites:
+### Test Coverage
 uv run pytest -v --cov=.
 
-### Kiểm tra code chuẩn PEP8 với Ruff
+### Linting (PEP8 Compliance)
 uv run ruff check .
 
 ### 📊 Test Coverage Result
-Đây là kết quả kiểm thử của Day 7:
+Below are the testing metrics for Day 14::
 
 ![Test Coverage Screenshot](./images/coverage.png)
